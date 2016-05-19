@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   moduleId: module.id,
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: 'acro-client.component.html',
   styleUrls: ['acro-client.component.css']
 })
-export class AcroClientAppComponent {
-  title = 'acro-client works!';
+export class AcroClientApp {
+  
+  title: string;
+  rooms: FirebaseListObservable<any[]>;
+  
+  constructor(af: AngularFire) {
+    this.title = 'Hello, world!';
+    this.rooms = af.database.list('/rooms');
+  }
 }
