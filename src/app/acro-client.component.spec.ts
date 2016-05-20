@@ -5,18 +5,18 @@ import {
   it,
   inject
 } from '@angular/core/testing';
-import { AcroClientApp } from '../app/acro-client.component';
+import { AcroClientComponent } from '../app/acro-client.component';
 
-beforeEachProviders(() => [AcroClientApp]);
+beforeEachProviders(() => [AcroClientComponent]);
 
 describe('App: AcroClient', () => {
   it('should create the app',
-      inject([AcroClientApp], (app: AcroClientApp) => {
+      inject([AcroClientComponent], (app: AcroClientComponent) => {
     expect(app).toBeTruthy();
   }));
 
   it('should have as title \'acro-client works!\'',
-      inject([AcroClientApp], (app: AcroClientApp) => {
+      inject([AcroClientComponent], (app: AcroClientComponent) => {
     expect(app.title).toEqual('acro-client works!');
   }));
 });

@@ -1,2 +1,2 @@
 export {environment} from './environment';
-export {AcroClientApp} from './acro-client.component';
+export {AcroClientComponent} from './acro-client.component';

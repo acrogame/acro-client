@@ -1,0 +1,11 @@
+<div>
+  <h1>Some rooms</h1>
+
+  <ul *ngFor="let r of rooms | async">
+    <li class="text pointer">
+      <a [routerLink]="[r.id]">{{r.id}}</a>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
