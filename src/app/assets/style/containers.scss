@@ -1,0 +1,109 @@
+@import 'colors';
+@import 'mixins';
+
+/**
+ *  Flexbox containers
+ */
+ 
+ .container-flex {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   
+   &.flexrow {
+     flex-direction: row;
+   }
+   
+   &.flexcolumn {
+     flex-direction: column;
+   }
+   
+   .child-flex {
+     flex: 1;
+     flex-grow: 4;
+     justify-content: center;
+     
+     &.centered {
+       text-align: center;
+     }
+     
+     &.half {
+       flex-grow: 4;
+     }
+     
+     &.quarter {
+       flex-grow: 1;
+     }
+   }
+}
+
+/**
+ *  Game Background effects
+ */
+
+.game-background-effects {
+  background-color: transparent;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  top: -70px;
+  left: 0;
+  right: 0;
+  height: 470px;
+  pointer-events: none !important;
+  
+  &.answered {
+    background: $co-green; /* fallback for old browsers */
+    background: -webkit-radial-gradient(400px at center bottom, $co-green-accent, $co-green);
+    background: radial-gradient(400px at center bottom, $co-green-accent, $co-green);
+    transition: opacity 3000ms ease-in-out;
+    opacity: 0;
+  }
+}
+
+/**
+ *  Specific containers
+ */
+
+.container-letters {
+  margin-top: 20px;
+}
+
+.container-category {
+  font-weight: 700;
+  font-size: 1.25em;
+  padding-top: 10px;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: $co-grey;
+  border: 5px solid $co-white;
+  @include rounded(5px);
+  @include shadow(1px);
+  
+  fieldset {
+    padding: 10px 5px 5px;
+    margin-bottom: 0;
+  }
+  
+  form {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Auth
+ *
+ */
+ 
+.container-auth {
+  button {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
