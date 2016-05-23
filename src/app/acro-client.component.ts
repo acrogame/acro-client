@@ -7,15 +7,15 @@ import { RoomComponent } from './room/room.component';
 // App Route Config 
 
 @Routes([
-  // Get a List of Rooms
-  {
-    'path': '/rooms',
-    'component': LobbyComponent
-  },
   // Go to a specific room (TODO)
   {
     'path': '/rooms/:id',
     'component': RoomComponent
+  },
+  // Get a List of Rooms
+  {
+    'path': '/rooms',
+    'component': LobbyComponent
   }
 ])
 
