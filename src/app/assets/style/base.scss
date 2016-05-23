@@ -8,13 +8,16 @@
 html, 
 body {
   height: 100%;
-  padding: 0;
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: $co-charcoal;
   background-color: $co-grey;
+}
+
+body {
+  padding: 70px 0 0;
 }
 
 a {
