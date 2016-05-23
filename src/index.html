@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AcroClient</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <base href="/">
+    
+    <title>AcroClient</title>
 
     {{#unless environment.production}}
     <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
@@ -22,9 +25,15 @@
       firebase.initializeApp(config);
     </script>
     
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Work+Sans:300,500,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oleo+Script:700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Catamaran:900' rel='stylesheet' type='text/css'>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="app/assets/style/css/acro.css">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
