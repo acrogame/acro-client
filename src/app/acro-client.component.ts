@@ -23,8 +23,7 @@ import { RoomComponent } from './room/room.component';
   moduleId: module.id,
   selector: 'acro-client',
   templateUrl: 'acro-client.template.html',
-  directives: [ROUTER_DIRECTIVES],
-  styleUrls: ['assets/style/css/acro.css']
+  directives: [ROUTER_DIRECTIVES]
 })
 
 export class AcroClientComponent {

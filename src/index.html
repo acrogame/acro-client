@@ -22,13 +22,21 @@
       firebase.initializeApp(config);
     </script>
     
+    <link rel="stylesheet" href="app/assets/style/css/acro.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
     
     <!-- Main App Component -->
-    <acro-client>Loading...</acro-client>
+    <acro-client>
+      <div class="spinner dark">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </acro-client>
 
       {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
       <script>

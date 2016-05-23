@@ -229,15 +229,23 @@ svg {
   text-align: center;
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: $co-grey;
+.spinner { 
+  div {
+    width: 18px;
+    height: 18px;
+    background-color: $co-grey;
 
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  &.dark {
+    div {
+      background-color: $co-purple;
+    }
+  }
 }
 
 .spinner .bounce1 {
