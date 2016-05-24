@@ -1,9 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { RouteSegment } from '@angular/router';
-// import {Spinner} from './spinner.component';
-// import {Chat} from './chat.component';
-// import {Game} from './game.component';
-// import {TaskModel, TASK_TYPE} from './../models/models.task';
+// import { Spinner } from './../shared/spinner.component';
+import { Chat } from './../chat/chat.component';
+import { Game } from './../game/game.component';
 
 @Component({
   moduleId: module.id,
@@ -55,6 +54,7 @@ export class RoomComponent implements OnInit {
   }
   
   ngOnInit() {
+    this.loading = false; // todo temp
     // this.$roomRef.once('value', ($snap) => this.roomLoaded($snap));
   }
   

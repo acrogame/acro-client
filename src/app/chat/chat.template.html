@@ -1,0 +1,15 @@
+<div>
+  <div class="container-chat fixed bg-black">
+    <div id="scroll-bottom" class="container-messages">
+      <div class="messages-list">
+        <div *ngFor="let c of chats | async">
+          <strong>{{c.userName}}:</strong> {{c.message}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-input fixed">
+    <input placeholder="Say something..." type="text" (keyup)="saySomething($event, message)" #message />
+  </div>
+</div>
+

@@ -17,4 +17,8 @@ export class LobbyComponent {
   constructor(private af: AngularFire, private router: Router) { 
     this.rooms = af.database.list('/rooms');
   }
+  
+  go(id: string): void {
+    this.router.navigate(['rooms', id]);
+  }
 }

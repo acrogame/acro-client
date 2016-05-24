@@ -1,9 +1,24 @@
-<div>
-  <h1>Some rooms</h1>
+<div class="container margin-top">
+  
+  <p class="heading">Find a Room</p>
+  
+  <!--<div class="panel">
+    <button class="button box">Rated: G</button>
+    <button class="button box">Rated: R</button>
+    <button class="button box">Skill: Advanced</button>
+    <button class="button box">Skill: Normal</button>
+    <button class="button box">Skill: Beginner</button>
+    <button class="button box">Pace: Fast</button>
+    <button class="button box">Pace: Normal</button>
+    <button class="button box">Pace: Slow</button>
+  </div>-->
+  
+  <div class="wall">
+    <div class="brick p-1-4" *ngFor="let r of rooms | async">
+      <div class="container-card pointer" (click)="go(r.id)">
+        <p>Room {{r.id}}</p>
+      </div>
+    </div>
+  </div>
 
-  <ul *ngFor="let r of rooms | async">
-    <li class="text pointer">
-      <a [routerLink]="[r.id]">{{r.id}}</a>
-    </li>
-  </ul>
 </div>
